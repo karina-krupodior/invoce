@@ -1,21 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import {Main_page} from "./main_page";
-import {NameForm} from "./create_invoice";
-
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { Main_page } from "./main_page";
+import CreateInvoice from "./create_invoice";
 
 ReactDOM.render(
   <BrowserRouter>
-      <Route exact path="/" component={Main_page}/>
-      <Route exact path="/create_invoice" component={NameForm}/>
-      <Switch>
-</Switch>
+    <Switch>
+      <Route exact path="/" component={Main_page} />
+      <Route exact path="/create_invoice" component={CreateInvoice} />
+    </Switch>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

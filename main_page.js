@@ -1,59 +1,65 @@
-import React, {Component} from "react";
-// import CustomizedTables from './table';
-import './main_page.css';
-import {Link} from "react-router-dom";
-
+import React, { Component } from "react";
+import "./main_page.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export class Main_page extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+    };
+  }
 
-    componentDidMount() {
-        // axious get to server json
+  componentDidMount() {
+    axios.get(`http://localhost:3000/data`).then((res) => {
+      const data = res.data;
+      this.setState({ data });
+    });
+  }
 
-        // const dataFromServer = axios.get('http/local')
-        // this.setState(dataFromServer)
-    }
+  render() {
+    return (
+      <div className={"main_page"}>
+        <h1 className="pretty-header right-line-header">Invoices</h1>
 
-    render() {
-        return (
-            <div className={'main_page'}><h1 className="pretty-header right-line-header">Invoices</h1>
-
-                <div className={'action'}>Action
-                <div>
-                    <Link to="/create_invoice">
-                        <button className="button_add" type="submit">Add new</button>
-                    </Link>
-                </div>
-                    <fieldset>
-                    <div className={"wrap_table"}>
-                        <h3>Invoices</h3>
-                        <table className="lux">
-                            <thead>
-                            <tr>
-                                <th>Create</th>
-                                <th>№</th>
-                                <th>Supply</th>
-                                <th>Comment</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>20-03-2018</td>
-                                <td>5ba37c48185c0c98e6880bed</td>
-                                <td>20-03-2018</td>
-                                <td>Text invoice</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                    </fieldset>
-                {/*<CustomizedTables*/}
-                {/*    // rows={datafromstate}*/}
-                {/*/>*/}
+        <div className={"action"}>
+          Action
+          <div>
+            <Link to="/create_invoice">
+              <button className="button_add" type="submit">
+                Add new
+              </button>
+            </Link>
+          </div>
+          <fieldset>
+            <div className={"wrap_table"}>
+              <h3>Invoices</h3>
+              <table className="lux">
+                <thead>
+                  <tr>
+                    <th>Create</th>
+                    <th>№</th>
+                    <th>Supply</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.data.length &&
+                    this.state.data.map((el) => (
+                      <tr>
+                        <td>{el.date_created}</td>
+                        <td>{el.number}</td>
+                        <td>{el.date_supplied}</td>
+                        <td>{el.comment}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
             </div>
-                </div>
-        )
-    }
+          </fieldset>
+        </div>
+      </div>
+    );
+  }
 }
-
-

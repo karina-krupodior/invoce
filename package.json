@@ -19,15 +19,19 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "date-fns": "^2.19.0",
     "dayjs": "^1.10.4",
     "fontsource-roboto": "^4.0.0",
     "luxon": "^1.26.0",
     "moment": "^2.29.1",
     "react": "^17.0.2",
+    "react-axios": "^2.0.5",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "stylelint-scss": "^3.19.0",
+    "uuidv4": "^6.2.7",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -53,5 +57,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
+    "prettier": "2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
   }
 }

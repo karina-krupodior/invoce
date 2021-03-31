@@ -11,6 +11,7 @@
     width:90%;
     background: #FFFFFF;
 }
+
 .header_create_invoice{
     font-size: 22px;
     line-height: 35px;
@@ -19,7 +20,6 @@
     overflow: hidden;
     padding: 0 0 10px 10px;
     border-left: 4px solid #858EA1;
-
 }
 .right-line-header:after {
     content: "";
@@ -33,7 +33,6 @@
 form {
     padding: 2% 2% 6% 2%;
     border: 1px solid #CCC;
-
 }
 
 ul {
@@ -54,21 +53,14 @@ label {
 
 input,
 textarea {
-    /* Убедимся, что все поля имеют одинаковые настройки шрифта
-       По умолчанию в textarea используется моноширинный шрифт */
     font: 1em sans-serif;
-
-    /* Определим размер полей */
     width: 300px;
     box-sizing: border-box;
-
-    /* Стилизуем границы полей */
     border: 1px solid #999;
 }
 
 input:focus,
 textarea:focus {
-    /* Дополнительная подсветка для элементов в фокусе */
     border-color: #000;
 }
 
@@ -103,36 +95,30 @@ padding: 1%;
     height: 25px;
     position: relative;
     width: 46%;
-
 }
 .icon_settings{
    size: 20px;
     position: absolute;
-
 }
 .invoice_data{
    position: absolute;
     right: 0%;
     width: 46%;
-
 }
 .invoice_label{
     position: absolute;
     left: 54%;
     top: 0%;
-
 }
 
 .supply_data{
     position: absolute;
     bottom: 52%;
     width: 46%;
-
 }
 .supply_label{
     position: absolute;
     left: 0px;
-
 }
 .li{
     padding: 7%;
@@ -141,7 +127,17 @@ padding: 1%;
     position: absolute;
     left: 0px;
     bottom: 95px;
+}
+input:invalid {
+    border: 2px dashed red;
+}
 
+input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+    border: 2px solid black;
 }
 
 
