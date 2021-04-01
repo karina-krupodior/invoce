@@ -115,7 +115,9 @@ class CreateInvoice extends Component {
           <FormErrors formErrors={this.state.formErrors} />
           <fieldset className={"form_into"}>
             <ul>
-              <label htmlFor="number">Number:</label>
+              <label htmlFor="number" className={"number_label"}>
+                Number:
+              </label>
               <li>
                 <input
                   className={"number_form"}
@@ -137,10 +139,10 @@ class CreateInvoice extends Component {
                   className={"invoice_data"}
                   type="date"
                   id="date_created"
-                  placeholder={"Select data"}
                   name="date_created"
                   value={this.date_created}
                   onChange={this.handleUserInput}
+                  placeholder={" "}
                   required
                 />
                 <label className={"supply_label"} htmlFor="date">
@@ -151,7 +153,6 @@ class CreateInvoice extends Component {
                     className={"supply_data"}
                     type="date"
                     id="date_supplied"
-                    placeholder={"Select data"}
                     name="date_supplied"
                     value={this.date_supplied}
                     onChange={this.handleUserInput}
@@ -169,6 +170,7 @@ class CreateInvoice extends Component {
                     onChange={this.handleUserInput}
                     maxLength="160"
                     required
+                    placeholder={" "}
                   ></textarea>
                 </li>
               </li>
