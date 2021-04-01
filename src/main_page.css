@@ -1,0 +1,74 @@
+.main_page{
+    max-width: 1280px;
+    width:100%;
+    background: #F1F3F6;
+
+    margin: auto;
+    padding: 1%;
+    position: relative;
+}
+.pretty-header {
+    font-size: 22px;
+    line-height: 35px;
+    margin: 20px 0px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 10px 10px;
+    border-left: 4px solid #858EA1;
+
+}
+.right-line-header:after {
+    content: "";
+    border-bottom: 1px solid #E5E7EA;
+    width: 100%;
+    height: 0.5em;
+    position: absolute;
+    top: 0px;
+    margin-left: 10px;
+}
+.action{
+    background-color: #FFFFFF;
+}
+.button_add{
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #4C6EFF inset, 0 0 0 0 #4C6EFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+.button_add:hover {
+    box-shadow: 0 0 10px 0 #4C6EFF inset, 0 0 10px 4px #4C6EFF;
+    color: #4C6EFF;
+}
+
+.lux {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.lux th {
+    background: #C6C7CA;
+    color: black;
+}
+.lux td {
+    border-bottom: 1px solid black;
+}
+.lux td, .lux th {
+    padding: 10px;
+    text-align: start;
+
+    border: 1px solid #ccc;
+}
+tbody tr:nth-child(odd) {
+    background: #eee;
+}
+.wrap_table{
+background: white;
+    padding: 0% 1% 5% 1%;
+}
