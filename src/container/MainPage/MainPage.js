@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./main_page.css";
+import "./MainPage.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-export class Main_page extends Component {
+export class MainPage extends Component {
   constructor() {
     super();
     this.state = {

@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Main_page } from "./main_page";
-import CreateInvoice from "./create_invoice";
+import { MainPage } from "./container/MainPage/MainPage";
+import CreateInvoice from "./container/CreateInvoice/CreateInvoice";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Main_page} />
+      <Route exact path="/" component={MainPage} />
       <Route exact path="/create_invoice" component={CreateInvoice} />
     </Switch>
   </BrowserRouter>,

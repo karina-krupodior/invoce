@@ -1,9 +1,9 @@
 import React, { Component, useState } from "react";
-import "./create_invoice.css";
+import "./CreateInvoice.css";
 import SettingsApplicationsIcon from "@material-ui/icons/SettingsApplications";
 import axios from "axios";
 import { uuid } from "uuidv4";
-import FormErrors from "./FormErrors";
+import FormErrors from "../../component/FormErrors";
 
 class CreateInvoice extends Component {
   constructor(props) {
